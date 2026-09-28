@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Scheler: La Ética Material de los Valores | Guía para Futuros Abogados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET Y VARIABLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --negro: #1a1a1a;
+            --gris-oscuro: #3a3a3a;
+            --gris-medio: #6a6a6a;
+            --gris-claro: #9a9a9a;
+            --gris-fondo: #faf8f5;
+            --gris-borde: #e0ddd8;
+            --blanco-perla: #faf8f5;
+            --blanco: #ffffff;
+            --sombra: 0 1px 3px rgba(0, 0, 0, 0.06);
+            --sombra-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --radio: 4px;
+            --transicion: all 0.25s ease;
+            --fuente-titulo: 'Libre Baskerville', 'Georgia', 'Times New Roman', serif;
+            --fuente-cuerpo: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--gris-oscuro);
+            background-color: var(--blanco-perla);
+            line-height: 1.8;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== TIPOGRAFÍA ===== */
+        h1, h2, h3, h4 {
+            font-family: var(--fuente-titulo);
+            color: var(--negro);
+            line-height: 1.35;
+            font-weight: 700;
+        }
+
+        h1 { font-size: 2.4rem; margin-bottom: 1rem; letter-spacing: -0.5px; }
+        h2 { font-size: 1.8rem; margin-bottom: 1.5rem; font-weight: 700; }
+        h3 { font-size: 1.25rem; margin-bottom: 0.8rem; margin-top: 1.5rem; font-weight: 700; }
+        h4 { font-size: 1rem; margin-bottom: 0.6rem; font-weight: 700; font-family: var(--fuente-cuerpo); }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--gris-oscuro);
+            text-align: justify;
+            hyphens: auto;
+            font-size: 0.98rem;
+        }
+
+        strong { color: var(--negro); font-weight: 700; }
+
+        em { font-style: italic; }
+
+        /* ===== CORCHETES ACADÉMICOS ===== */
+        .concept {
+            font-style: italic;
+            color: var(--gris-medio);
+            font-size: 0.9em;
+        }
+
+        /* ===== NAVEGACIÓN ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--blanco-perla);
+            z-index: 1000;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            border-bottom: 1px solid var(--gris-borde);
+            transition: var(--transicion);
+        }
+
+        .navbar .logo {
+            color: var(--negro);
+            font-family: var(--fuente-titulo);
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1.8rem;
+        }
+
+        .navbar ul a {
+            color: var(--gris-medio);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: var(--transicion);
+            padding: 0.3rem 0;
+            border-bottom: 1px solid transparent;
+            letter-spacing: 0.2px;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .navbar ul a:hover {
+            color: var(--negro);
+            border-bottom-color: var(--negro);
+        }
+
+        /* ===== BOTÓN CONMUTADOR (DARK MODE) ===== */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--gris-borde);
+            color: var(--gris-oscuro);
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            transition: var(--transicion);
+            margin-left: 1.5rem;
+            flex-shrink: 0;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--negro);
+            color: var(--negro);
+        }
+
+        /* ===== MODO OSCURO ===== */
+        body.dark-mode {
+            --negro: #f0f0f0;
+            --gris-oscuro: #d0d0d0;
+            --gris-medio: #a0a0a0;
+            --gris-claro: #777777;
+            --gris-fondo: #1a1a1a;
+            --gris-borde: #333333;
+            --blanco-perla: #111111;
+            --blanco: #1a1a1a;
+        }
+
+        body.dark-mode .navbar {
+            background: #111111;
+            border-bottom-color: #333333;
+        }
+
+        body.dark-mode .hero {
+            background: #111111;
+        }
+
+        body.dark-mode .card {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode .analogy {
+            background: #1a1a1a;
+            border-left-color: #555555;
+        }
+
+        body.dark-mode .quote {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode .table-container {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode table {
+            background: #1a1a1a;
+        }
+
+        body.dark-mode thead {
+            background: #222222;
+        }
+
+        body.dark-mode th {
+            color: #f0f0f0;
+            border-bottom-color: #333333;
+        }
+
+        body.dark-mode td {
+            border-bottom-color: #333333;
+        }
+
+        body.dark-mode tbody tr:hover {
+            background: #222222;
+        }
+
+        body.dark-mode .hierarchy-level {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode .tipo-card {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode .caso {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode .situacion {
+            background: #222222;
+        }
+
+        body.dark-mode .glosario-item {
+            border-bottom-color: #333333;
+        }
+
+        body.dark-mode .preguntas {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+
+        body.dark-mode footer {
+            background: #111111;
+            border-top-color: #333333;
+        }
+
+        body.dark-mode .slide {
+            background: #1a1a1a;
+        }
+
+        body.dark-mode .slider-arrow {
+            background: #1a1a1a;
+            border-color: #333333;
+            color: #f0f0f0;
+        }
+
+        body.dark-mode .slider-dots {
+            background: #1a1a1a;
+            border-top-color: #333333;
+        }
+
+        body.dark-mode .slider-container {
+            border-color: #333333;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: var(--blanco-perla);
+            border-bottom: 1px solid var(--gris-borde);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            color: var(--negro);
+        }
+
+        .hero .subtitle {
+            color: var(--gris-medio);
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-family: var(--fuente-titulo);
+        }
+
+        .hero .description {
+            color: var(--gris-medio);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2.2rem;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: var(--transicion);
+            cursor: pointer;
+            border: 1px solid var(--negro);
+            letter-spacing: 0.3px;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .btn-primary {
+            background: var(--negro);
+            color: var(--blanco-perla);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--negro);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--negro);
+        }
+
+        .btn-secondary:hover {
+            background: var(--negro);
+            color: var(--blanco-perla);
+        }
+
+        /* ===== SECCIONES ===== */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-alt {
+            background: var(--gris-fondo);
+            max-width: 100%;
+            padding-left: calc((100% - 1000px) / 2 + 2rem);
+            padding-right: calc((100% - 1000px) / 2 + 2rem);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            display: inline-block;
+            border-bottom: 1px solid var(--negro);
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--gris-medio);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0.5rem auto 0;
+            text-align: center;
+        }
+
+        /* ===== TARJETAS ===== */
+        .card {
+            background: var(--blanco-perla);
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+            padding: 2rem;
+            transition: var(--transicion);
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            box-shadow: var(--sombra-hover);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            text-align: justify;
+        }
+
+        /* ===== ANALOGÍAS ===== */
+        .analogy {
+            background: var(--gris-fondo);
+            border-left: 2px solid var(--negro);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--gris-medio);
+            border-radius: 0 var(--radio) var(--radio) 0;
+        }
+
+        .analogy strong {
+            color: var(--negro);
+            font-style: normal;
+        }
+
+        .analogy::before {
+            content: '→ ';
+            font-style: normal;
+            font-weight: 700;
+            color: var(--negro);
+        }
+
+        .analogy p {
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        /* ===== CITAS ===== */
+        .quote {
+            background: var(--gris-fondo);
+            border: 1px solid var(--gris-borde);
+            padding: 1.5rem 2rem 1.5rem 3.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+            border-radius: var(--radio);
+        }
+
+        .quote::before {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            color: var(--gris-claro);
+            line-height: 1;
+            font-family: var(--fuente-titulo);
+        }
+
+        .quote p {
+            margin: 0;
+            color: var(--gris-oscuro);
+            font-size: 0.95rem;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        .quote strong {
+            color: var(--negro);
+            font-style: normal;
+        }
+
+        /* ===== TABLAS ===== */
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--blanco-perla);
+        }
+
+        thead {
+            background: var(--gris-fondo);
+            border-bottom: 2px solid var(--negro);
+        }
+
+        th, td {
+            padding: 0.8rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gris-borde);
+            font-size: 0.9rem;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        th {
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--negro);
+            font-family: var(--fuente-cuerpo);
+        }
+
+        td {
+            color: var(--gris-oscuro);
+        }
+
+        td strong {
+            color: var(--negro);
+        }
+
+        tbody tr:hover {
+            background: var(--gris-fondo);
+        }
+
+        /* ===== JERARQUÍA VISUAL ===== */
+        .hierarchy {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin: 2rem 0;
+            align-items: center;
+        }
+
+        .hierarchy-level {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            max-width: 600px;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+            color: var(--gris-oscuro);
+            font-weight: 400;
+            transition: var(--transicion);
+            background: var(--blanco-perla);
+        }
+
+        .hierarchy-level:hover {
+            border-color: var(--negro);
+        }
+
+        .hierarchy-level .icon {
+            font-size: 0.9rem;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gris-borde);
+            border-radius: 50%;
+            color: var(--gris-medio);
+            flex-shrink: 0;
+            font-weight: 700;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .hierarchy-level .label {
+            flex: 1;
+            font-size: 0.95rem;
+            text-align: left;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .hierarchy-level .sublabel {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--gris-medio);
+        }
+
+        .hierarchy-arrow {
+            font-size: 0.8rem;
+            color: var(--gris-claro);
+        }
+
+        /* ===== LISTAS ===== */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .styled-list li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            border-bottom: 1px solid var(--gris-borde);
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .styled-list li:last-child {
+            border-bottom: none;
+        }
+
+        .styled-list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--gris-claro);
+        }
+
+        /* ===== GRID DE TARJETAS ===== */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        /* ===== TIPOS DE ABOGADOS ===== */
+        .tipo-card {
+            background: var(--blanco-perla);
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+            padding: 1.5rem;
+            transition: var(--transicion);
+            text-align: center;
+        }
+
+        .tipo-card:hover {
+            border-color: var(--negro);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .tipo-card .emoji {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gris-medio);
+        }
+
+        .tipo-card h4 {
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: var(--fuente-titulo);
+        }
+
+        .tipo-card .valor {
+            font-size: 0.7rem;
+            color: var(--gris-medio);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 0.5rem;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .tipo-card .ejemplo {
+            font-size: 0.85rem;
+            color: var(--gris-medio);
+            font-style: italic;
+            text-align: center;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        /* ===== CASOS PRÁCTICOS ===== */
+        .caso {
+            background: var(--blanco-perla);
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transicion);
+        }
+
+        .caso:hover {
+            box-shadow: var(--sombra-hover);
+        }
+
+        .caso h3 {
+            color: var(--negro);
+        }
+
+        .caso p {
+            text-align: justify;
+        }
+
+        .caso .situacion {
+            background: var(--gris-fondo);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radio);
+            margin: 1rem 0;
+            font-style: italic;
+            border-left: 2px solid var(--negro);
+        }
+
+        .caso .situacion p {
+            text-align: justify;
+            margin: 0;
+        }
+
+        /* ===== GLOSARIO ===== */
+        .glosario-item {
+            display: flex;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--gris-borde);
+            align-items: flex-start;
+        }
+
+        .glosario-item:last-child {
+            border-bottom: none;
+        }
+
+        .glosario-item .termino {
+            font-weight: 700;
+            color: var(--negro);
+            min-width: 160px;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .glosario-item .definicion {
+            flex: 1;
+            font-size: 0.9rem;
+            color: var(--gris-oscuro);
+            text-align: justify;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .glosario-item .analogia {
+            font-style: italic;
+            color: var(--gris-medio);
+            font-size: 0.85rem;
+            margin-top: 0.2rem;
+            text-align: justify;
+        }
+
+        /* ===== PREGUNTAS ===== */
+        .preguntas {
+            background: var(--gris-fondo);
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .preguntas h3 {
+            color: var(--negro);
+            margin-top: 0;
+        }
+
+        .preguntas ol {
+            padding-left: 1.5rem;
+        }
+
+        .preguntas li {
+            margin-bottom: 0.6rem;
+            color: var(--gris-oscuro);
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        .preguntas strong {
+            color: var(--negro);
+        }
+
+        /* ===== SLIDER DE CASOS ===== */
+        .slider-container {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border: 1px solid var(--gris-borde);
+            border-radius: var(--radio);
+            background: var(--blanco-perla);
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            padding: 2.5rem;
+            background: var(--blanco-perla);
+        }
+
+        .slide h3 {
+            margin-top: 0;
+        }
+
+        .slide p {
+            text-align: justify;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--blanco-perla);
+            border: 1px solid var(--gris-borde);
+            color: var(--gris-oscuro);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: var(--transicion);
+            z-index: 2;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .slider-arrow:hover {
+            border-color: var(--negro);
+            color: var(--negro);
+        }
+
+        .slider-arrow.prev {
+            left: 1rem;
+        }
+
+        .slider-arrow.next {
+            right: 1rem;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 0;
+            background: var(--blanco-perla);
+            border-top: 1px solid var(--gris-borde);
+        }
+
+        .slider-dots .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gris-borde);
+            cursor: pointer;
+            transition: var(--transicion);
+        }
+
+        .slider-dots .dot.active {
+            background: var(--negro);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--blanco-perla);
+            border-top: 1px solid var(--gris-borde);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+            color: var(--gris-medio);
+        }
+
+        footer strong {
+            color: var(--negro);
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        /* ===== BOTÓN VOLVER ARRIBA ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--blanco-perla);
+            color: var(--negro);
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gris-borde);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: var(--sombra);
+            transition: var(--transicion);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            border-color: var(--negro);
+            box-shadow: var(--sombra-hover);
+        }
+
+        /* ===== MENÚ HAMBURGUESA ===== */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--negro);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.3rem;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            h3 { font-size: 1.1rem; }
+
+            .navbar {
+                padding: 0 1rem;
+            }
+
+            .navbar ul {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--blanco-perla);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0.5rem;
+                border-bottom: 1px solid var(--gris-borde);
+                box-shadow: var(--sombra);
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .theme-toggle {
+                margin-left: 0.5rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem 3rem;
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .hero .description {
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 4rem 1.2rem;
+                min-height: auto;
+            }
+
+            .section-alt {
+                padding-left: 1.2rem;
+                padding-right: 1.2rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .glosario-item {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+
+            .glosario-item .termino {
+                min-width: auto;
+            }
+
+            .hierarchy-level {
+                padding: 0.7rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hierarchy-level .label {
+                font-size: 0.85rem;
+            }
+
+            .slider-arrow {
+                width: 32px;
+                height: 32px;
+                font-size: 0.85rem;
+            }
+
+            .slider-arrow.prev {
+                left: 0.5rem;
+            }
+
+            .slider-arrow.next {
+                right: 0.5rem;
+            }
+
+            .slide {
+                padding: 1.5rem;
+            }
+
+            .quote {
+                padding: 1.2rem 1.5rem 1.2rem 3rem;
+            }
+
+            .quote::before {
+                font-size: 2.5rem;
+                left: 0.8rem;
+            }
+
+            .table-container {
+                font-size: 0.8rem;
+            }
+
+            th, td {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.2rem; }
+
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-alt {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .card {
+                padding: 1.2rem;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gris-fondo);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gris-borde);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gris-claro);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <a href="#" class="logo">Max Scheler</a>
+        <button class="menu-toggle" onclick="document.querySelector('.navbar ul').classList.toggle('active')">☰</button>
+        <ul>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#conceptos">Conceptos</a></li>
+            <li><a href="#jerarquia">Jerarquía</a></li>
+            <li><a href="#aplicacion">Aplicación</a></li>
+            <li><a href="#casos">Casos</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" title="Cambiar tema">◐</button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Max Scheler: la ética material de los valores</h1>
+            <p class="subtitle">Un libro que todo abogado debería leer</p>
+            <p class="description">
+                Una introducción al pensamiento axiológico de Max Scheler y su relevancia
+                para la fundamentación ética del derecho.
+            </p>
+            <div class="hero-buttons">
+                <a href="#introduccion" class="btn btn-primary">Comenzar</a>
+                <a href="#casos" class="btn btn-secondary">Casos prácticos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SECCIÓN 1: INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="section">
+        <div class="section-title">
+            <h2>1. Introducción</h2>
+            <p>La relevancia de Scheler para la formación jurídica</p>
+        </div>
+
+        <div class="card">
+            <h3>1.1 El problema de la fundamentación ética del derecho</h3>
+            <p>
+                La práctica jurídica no se agota en la aplicación mecánica de normas.
+                El abogado <strong>interpreta</strong> <span class="concept">[actividad hermenéutica mediante la cual se determina el sentido y alcance de una norma en un caso concreto, atendiendo a criterios gramaticales, sistemáticos, históricos y teleológicos]</span>;
+                el juez <strong>juzga</strong> <span class="concept">[acto de subsunción de un hecho en una norma y de atribución de una consecuencia jurídica, que implica además una valoración sobre la justicia del resultado]</span>;
+                el legislador <strong>crea</strong> <span class="concept">[actividad de producción normativa que presupone una previa jerarquización de valores orientadora del contenido de la ley]</span>.
+                En todas estas operaciones subyace una dimensión axiológica que el positivismo jurídico tiende a obliterar.
+            </p>
+            <p>
+                Scheler sostiene que <strong>los valores son cualidades objetivas</strong> <span class="concept">[independientes de las preferencias subjetivas del sujeto que los capta, y por tanto válidos con independencia de que sean o no reconocidos]</span>
+                que el derecho positivo no crea, sino que presupone. Su ética material de los valores ofrece al jurista las categorías conceptuales para identificar y jerarquizar los valores que orientan la producción y aplicación del derecho.
+            </p>
+            <p>
+                El <strong>positivismo jurídico</strong> <span class="concept">[concepción según la cual el derecho se reduce al conjunto de normas positivas vigentes, con independencia de su valoración ética]</span>
+                reduce el derecho a un sistema de reglas cuyo fundamento se agota en su validez formal. Scheler advierte que esta reducción deja sin respuesta la pregunta por el fundamento último de la obligatoriedad jurídica: ¿por qué debemos obedecer la ley? La respuesta no puede ser meramente formal; exige una fundamentación axiológica.
+            </p>
+
+            <div class="quote">
+                <p><strong>"El derecho tiene que ver primariamente con la disposición de ánimo social y con la acción social de la persona."</strong></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>1.2 Max Scheler: contexto y obra</h3>
+            <p>
+                Max Scheler (1874-1928) fue discípulo de Edmund Husserl, fundador de la
+                <strong>fenomenología</strong> <span class="concept">[método filosófico que describe las estructuras esenciales de la experiencia consciente, prescindiendo de presupuestos teóricos y de la actitud natural]</span>.
+                Su obra principal, <em>El formalismo en la ética y la ética material de los valores</em>
+                (1913-1916), fue redactada en parte durante su servicio como soldado en el frente oriental
+                de la Primera Guerra Mundial.
+            </p>
+            <p>
+                Scheler emprende una doble crítica: contra el formalismo kantiano, que reduce la ética
+                a una ley vacía de contenido; y contra el relativismo historicista, que disuelve los valores
+                en preferencias contingentes. Su propuesta es una <strong>síntesis</strong>
+                <span class="concept">[integración de elementos opuestos en una unidad superior que conserva lo válido de cada uno]</span>
+                entre el apriorismo kantiano y la multiplicidad axiológica nietzscheana.
+            </p>
+            <p>
+                La obra se inscribe en el contexto de la <strong>crisis del historicismo</strong>
+                <span class="concept">[corriente que reduce toda verdad y todo valor a productos históricos contingentes, negando su validez universal]</span>
+                y del <strong>psicologismo</strong>
+                <span class="concept">[reducción de las leyes lógicas y éticas a meras regularidades psicológicas empíricas]</span>.
+                Frente a ambos, Scheler reivindica la objetividad del orden axiológico.
+            </p>
+
+            <div class="analogy">
+                <strong>Analogía:</strong> Kant construyó una casa con paredes pero sin muebles.
+                Scheler advierte que falta el contenido: los valores son los muebles que hacen habitable la casa.
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 2: CONCEPTOS CLAVE ===== -->
+    <section id="conceptos" class="section section-alt">
+        <div class="section-title">
+            <h2>2. Conceptos fundamentales</h2>
+            <p>Las categorías de la axiología scheleriana</p>
+        </div>
+
+        <div class="card">
+            <h3>2.1 La naturaleza del valor</h3>
+            <p>
+                <strong>Un valor es una cualidad objetiva, a priori e independiente de las cosas</strong>
+                <span class="concept">[esencia intuible que posee un contenido material propio y que se da en una experiencia emocional intencional]</span>.
+                No es una cosa, ni una emoción, ni una opinión.
+            </p>
+
+            <ul class="styled-list">
+                <li>No son propiedades físicas ni psíquicas <span class="concept">[no pertenecen a la categoría de los objetos reales]</span>.</li>
+                <li>No son relaciones <span class="concept">[no consisten en un vínculo entre sujeto y objeto]</span>.</li>
+                <li>No son abstracciones <span class="concept">[no se obtienen por generalización inductiva a partir de propiedades comunes]</span>.</li>
+                <li>Son <strong>cualidades de valor</strong> que constituyen un dominio propio de objetos.</li>
+            </ul>
+
+            <p>
+                Scheler distingue con rigor entre el <strong>valor</strong> y su <strong>depositario</strong>
+                <span class="concept">[realidad concreta —persona, cosa, acción o situación— en la que un valor se manifiesta o se realiza]</span>.
+                Un mismo valor puede manifestarse en múltiples depositarios sin que su esencia se altere.
+            </p>
+
+            <div class="analogy">
+                <strong>Analogía:</strong> El <strong>bien</strong> <span class="concept">[objeto concreto y real que posee valor]</span>
+                es un anillo de oro; el <strong>valor</strong> es su belleza o su significado. Si se funde el anillo,
+                el bien desaparece, pero el valor permanece en otro anillo.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>2.2 Bienes y valores</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bienes</th>
+                            <th>Valores</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Cosas valiosas</td><td>Cualidades de valor</td></tr>
+                        <tr><td>Reales (existen en el tiempo)</td><td>Ideales (existen en sí)</td></tr>
+                        <tr><td>Perecederos</td><td>Indestructibles</td></tr>
+                        <tr><td>Ejemplo: un amigo</td><td>Ejemplo: la amistad</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                <strong>Para el jurista:</strong> la justicia es un valor que existe aunque ninguna ley lo positivice.
+                Una ley puede ser injusta; la justicia sigue vigente como <strong>ideal regulador</strong>
+                <span class="concept">[principio normativo que orienta la producción y aplicación del derecho sin estar necesariamente positivizado]</span>.
+            </p>
+            <p>
+                Esta distinción tiene una consecuencia decisiva para la teoría del derecho:
+                el <strong>derecho natural</strong>
+                <span class="concept">[conjunto de principios jurídicos fundados en la naturaleza racional y social del hombre, anteriores y superiores al derecho positivo]</span>
+                no es una construcción arbitraria, sino la expresión de un orden axiológico objetivo que el legislador descubre y positiviza, pero no crea.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>2.3 El conocimiento de los valores: la intuición emocional</h3>
+            <p>
+                Los valores no se conocen por la razón lógica, sino por <strong>intuición emocional</strong>.
+                Scheler la denomina <strong>Fühlen</strong>
+                <span class="concept">[percibir sentimental: acto intencional de la vida emocional que capta directamente las cualidades de valor, a diferencia del mero estado afectivo]</span>.
+                Es un acto <strong>intencional</strong>
+                <span class="concept">[acto de conciencia dirigido a un objeto, que mienta algo trascendente a sí mismo]</span>,
+                no un estado pasivo.
+            </p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Estado sentimental (Gefühl)</th>
+                            <th>Percibir sentimental (Fühlen)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tristeza, alegría</td><td>"Siento que esto es bueno"</td></tr>
+                        <tr><td>Subjetivo, pasivo</td><td>Intencional, capta un valor</td></tr>
+                        <tr><td>Sin dirección</td><td>Dirigido a algo</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                La vida emocional se estructura en cuatro estratos de profundidad creciente:
+                sentimientos sensibles, vitales, anímicos y espirituales. Cada estrato capta valores
+                de una modalidad específica.
+            </p>
+            <p>
+                El <strong>preferir</strong>
+                <span class="concept">[acto emocional mediante el cual se capta la superioridad de un valor sobre otro, sin que medie juicio lógico alguno]</span>
+                es el modo específico de acceso a la jerarquía. No es un acto de voluntad, sino de conocimiento axiológico.
+            </p>
+
+            <div class="quote">
+                <p><strong>"El corazón posee algo estrictamente análogo a la lógica, en su propio dominio."</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 3: JERARQUÍA ===== -->
+    <section id="jerarquia" class="section">
+        <div class="section-title">
+            <h2>3. La jerarquía de valores</h2>
+            <p>El orden objetivo del reino axiológico</p>
+        </div>
+
+        <div class="card">
+            <h3>3.1 El orden objetivo</h3>
+            <p>
+                Los valores no son iguales entre sí. Existe un <strong>orden objetivo</strong>
+                <span class="concept">[orden independiente de la opinión o preferencia del sujeto, fundado en la esencia misma de los valores]</span>
+                que los jerarquiza de menor a mayor altura. Este orden es <strong>a priori</strong>
+                <span class="concept">[no depende de la experiencia inductiva ni de la observación empírica]</span>
+                y <strong>universal</strong>
+                <span class="concept">[válido para todo sujeto capaz de captar valores, con independencia de su cultura o época]</span>.
+            </p>
+            <p>
+                La jerarquía no es una construcción arbitraria: se funda en la <strong>esencia material</strong>
+                <span class="concept">[contenido propio e irreductible de cada valor, que determina su posición en el orden axiológico]</span>
+                de cada valor. Por eso Scheler habla de una <strong>ética material de los valores</strong>:
+                material, porque atiende al contenido; a priori, porque no deriva de la experiencia.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3.2 Los cinco criterios de altura</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Criterio</th>
+                            <th>Explicación</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Duración</strong></td>
+                            <td>Los superiores duran más</td>
+                            <td>La amistad vs. un helado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Divisibilidad</strong></td>
+                            <td>Los superiores se comparten sin perderse</td>
+                            <td>El amor vs. el dinero</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Fundamentación</strong></td>
+                            <td>Los superiores fundamentan a los inferiores</td>
+                            <td>La salud fundamenta el placer</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Satisfacción</strong></td>
+                            <td>Los superiores dan una satisfacción más profunda</td>
+                            <td>La paz interior vs. un dulce</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Relatividad</strong></td>
+                            <td>Los superiores son menos relativos</td>
+                            <td>La justicia vs. lo agradable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Los criterios no operan aisladamente: se implican mutuamente. Un valor superior es
+                simultáneamente más duradero, menos divisible, más fundamental, más profundo y menos relativo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3.3 Las cuatro modalidades</h3>
+            <div class="hierarchy">
+                <div class="hierarchy-level">
+                    <span class="icon">4</span>
+                    <span class="label">Valores religiosos<br><span class="sublabel">Lo santo y lo profano</span></span>
+                </div>
+                <div class="hierarchy-arrow">▲</div>
+                <div class="hierarchy-level">
+                    <span class="icon">3</span>
+                    <span class="label">Valores espirituales<br><span class="sublabel">Belleza, justicia, verdad</span></span>
+                </div>
+                <div class="hierarchy-arrow">▲</div>
+                <div class="hierarchy-level">
+                    <span class="icon">2</span>
+                    <span class="label">Valores vitales<br><span class="sublabel">Salud, fuerza, nobleza</span></span>
+                </div>
+                <div class="hierarchy-arrow">▲</div>
+                <div class="hierarchy-level">
+                    <span class="icon">1</span>
+                    <span class="label">Valores sensibles<br><span class="sublabel">Placer, dolor, lo agradable</span></span>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:1.5rem;">
+                <strong>Los valores inferiores sostienen a los superiores; los superiores orientan a los inferiores.</strong>
+            </p>
+            <p>
+                Esta relación de <strong>fundamentación</strong>
+                <span class="concept">[dependencia unilateral: el valor superior presupone el inferior como condición, pero no se reduce a él]</span>
+                es decisiva: sin salud no hay acceso a los valores espirituales; pero la salud no agota el sentido de la vida espiritual.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3.4 Valores sensibles</h3>
+            <ul class="styled-list">
+                <li><strong>Polos:</strong> agradable / desagradable.</li>
+                <li><strong>Captación:</strong> percibir afectivo sensible.</li>
+                <li><strong>Ejemplos:</strong> el sabor de un helado, el calor del sol.</li>
+            </ul>
+            <p>
+                <strong>Para el abogado:</strong> el cliente que solo busca ganar sin importar la justicia,
+                o el abogado que solo persigue su comisión, permanecen en este nivel. El <strong>hedonismo</strong>
+                <span class="concept">[doctrina según la cual el placer es el bien supremo y el criterio de la conducta moral]</span>
+                es la absolutización indebida de este estrato.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3.5 Valores vitales</h3>
+            <ul class="styled-list">
+                <li><strong>Polos:</strong> noble / vulgar.</li>
+                <li><strong>Captación:</strong> percibir afectivo vital.</li>
+                <li><strong>Ejemplos:</strong> salud, fuerza, coraje, nobleza de carácter.</li>
+            </ul>
+            <p>
+                <strong>Para el abogado:</strong> defender por coraje o valentía personal es superior al placer,
+                pero todavía no alcanza la justicia en sentido pleno. El <strong>vitalismo</strong>
+                <span class="concept">[corriente que absolutiza los valores de la vida como criterio supremo]</span>
+                comete el mismo error que el hedonismo, pero en un nivel superior.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3.6 Valores espirituales</h3>
+            <ul class="styled-list">
+                <li><strong>Polos:</strong> bello / feo, justo / injusto, verdadero / falso.</li>
+                <li><strong>Captación:</strong> percibir afectivo espiritual.</li>
+                <li><strong>Subcategorías:</strong> estéticos, jurídicos (justicia objetiva), del conocimiento puro.</li>
+            </ul>
+            <p>
+                <strong>Para el abogado:</strong> la justicia es un valor espiritual. Quien la defiende
+                a costa de su carrera o de su vida accede a este nivel.
+            </p>
+            <p>
+                Los <strong>valores jurídicos</strong> son independientes del Estado y de la legislación positiva.
+                La <strong>justicia objetiva</strong>
+                <span class="concept">[orden de relaciones jurídicas fundado en la naturaleza de las cosas y en la dignidad de la persona, anterior a toda positivación]</span>
+                es el criterio último de legitimidad del derecho positivo.
+            </p>
+            <div class="quote">
+                <p><strong>"Los valores de lo justo y de lo injusto... fundamentan la idea de un orden jurídico objetivo, independiente del Estado y de sus leyes."</strong></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>3.7 Valores religiosos</h3>
+            <ul class="styled-list">
+                <li><strong>Polos:</strong> santo / profano.</li>
+                <li><strong>Captación:</strong> amor religioso dirigido a las personas.</li>
+                <li><strong>Ejemplos:</strong> santidad, fe, veneración.</li>
+            </ul>
+            <p>
+                <strong>Para el abogado:</strong> el juramento
+                <span class="concept">[acto solemne mediante el cual se pone a Dios o a un valor sagrado por testigo de la verdad de una declaración o de la fidelidad de una promesa]</span>
+                invoca este nivel. La dignidad de la persona, valor supremo, tiene para Scheler su raíz última en lo religioso.
+            </p>
+            <p>
+                Scheler no reduce la ética a la religión, pero sostiene que el orden axiológico culmina
+                en los valores religiosos. La <strong>autonomía de la ética</strong>
+                <span class="concept">[independencia de la fundamentación ética respecto de presupuestos teológicos o metafísicos]</span>
+                no excluye su apertura al orden de lo sagrado.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>3.8 Los valores morales: transversales a la jerarquía</h3>
+            <p>
+                "Bueno" y "malo" no constituyen un nivel más. Son <strong>transversales</strong>:
+                atraviesan todos los niveles.
+            </p>
+            <ul class="styled-list">
+                <li><strong>Bueno:</strong> el acto de realizar el valor <strong>preferido</strong>
+                <span class="concept">[aquel que en el acto de preferir se revela como superior en la jerarquía objetiva]</span>.</li>
+                <li><strong>Malo:</strong> el acto de realizar el valor <strong>postergado</strong>
+                <span class="concept">[aquel que en el acto de preferir se revela como inferior y que, sin embargo, es realizado cuando debía preferirse el superior]</span>.</li>
+            </ul>
+            <p>
+                Esta tesis es capital: la moralidad no reside en el nivel axiológico en que se actúa,
+                sino en la <strong>coherencia entre la elección y el orden objetivo de preferencia</strong>.
+                Un hombre puede ser bueno en el nivel sensible (eligiendo el placer honesto sobre el dañino)
+                y malo en el nivel espiritual (traicionando la verdad por conveniencia).
+            </p>
+            <div class="quote">
+                <p><strong>"'Bueno' es el valor del acto mismo de realización del valor preferible en un caso dado, y 'malo' es del acto de realización del valor más bajo cuando ha debido preferirse uno más alto."</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 4: APLICACIÓN AL DERECHO ===== -->
+    <section id="aplicacion" class="section section-alt">
+        <div class="section-title">
+            <h2>4. Aplicación al derecho</h2>
+            <p>La fundamentación axiológica de la práctica jurídica</p>
+        </div>
+
+        <div class="card">
+            <h3>4.1 Valor, deber y justicia</h3>
+            <p>
+                Kant sostiene que el deber es primero. Scheler invierte la relación:
+                <strong>el valor es primero; el deber se funda en el valor</strong>.
+            </p>
+            <ol class="styled-list">
+                <li><strong>Valor:</strong> se capta la dignidad de la persona.</li>
+                <li><strong>Deber-ser ideal</strong> <span class="concept">[relación pura entre un valor y su posible existencia, expresada en la proposición "esto debe ser" con independencia de toda voluntad o mandato]</span>.</li>
+                <li><strong>Justicia:</strong> se capta que la situación es injusta.</li>
+                <li><strong>Deber moral</strong> <span class="concept">[obligación concreta que el valor impone a una persona determinada en una situación determinada]</span>.</li>
+            </ol>
+            <p>
+                El <strong>deber normativo</strong>
+                <span class="concept">[exigencia que surge cuando existe una tendencia contraria al deber-ser ideal, y que se formula como mandato o prohibición]</span>
+                es el nivel más bajo: la ley positiva solo existe porque hay resistencia.
+                Si todos los hombres fueran justos por naturaleza, no habría necesidad de códigos penales.
+            </p>
+            <div class="analogy">
+                <strong>Analogía:</strong> el valor es la raíz, el deber el tronco, la justicia el fruto.
+                El derecho positivo es la corteza que protege el tronco.
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>4.2 La disposición de ánimo frente a la ética de resultados</h3>
+            <p>
+                Scheler rechaza la <strong>ética de resultados</strong>
+                <span class="concept">[concepción según la cual el valor de una acción se mide exclusivamente por sus consecuencias]</span>.
+                El valor moral reside en la <strong>disposición de ánimo (Gesinnung)</strong>
+                <span class="concept">[actitud interior profunda y duradera que orienta la voluntad y la conducta]</span>,
+                no en el éxito externo.
+            </p>
+            <p>
+                <strong>Para el abogado:</strong> quien gana un caso con trampas no es un buen abogado.
+                La ética profesional se mide por la integridad de la intención, no por el resultado.
+                El <strong>pragmatismo jurídico</strong>
+                <span class="concept">[corriente que reduce el valor del derecho a su eficacia o utilidad práctica]</span>
+                incurre en el mismo error que la ética de resultados.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>4.3 La persona como valor supremo</h3>
+            <p>
+                La persona es el valor supremo del orden axiológico. No es una cosa ni un objeto:
+                es el <strong>centro concreto de actos</strong>
+                <span class="concept">[unidad que existe únicamente en la ejecución de sus actos y que no puede ser objetivada]</span>.
+            </p>
+            <ul class="styled-list">
+                <li><strong>Yo (Ich):</strong> objeto de la percepción interna, analizable.</li>
+                <li><strong>Persona:</strong> no objetivable; existe solo en la ejecución de sus actos.</li>
+            </ul>
+            <p>
+                El <strong>principio de solidaridad</strong>
+                <span class="concept">[todas las personas finitas son corresponsables del valor moral de todas las demás y de su destino]</span>
+                funda la corresponsabilidad universal. No hay personas aisladas: cada acto moral afecta al todo del reino de las personas.
+            </p>
+            <p>
+                <strong>Para el abogado:</strong> el derecho existe para proteger a las personas, no al revés.
+                El <strong>personalismo jurídico</strong>
+                <span class="concept">[concepción que sitúa a la persona como valor supremo y fin último del ordenamiento jurídico]</span>
+                se opone a toda forma de colectivismo que subordine la persona al Estado o a la comunidad.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>4.4 Prototipos y contrafiguras</h3>
+            <p>
+                La ética no se aprende leyendo códigos, sino contemplando personas buenas.
+            </p>
+            <ul class="styled-list">
+                <li><strong>Prototipo</strong> <span class="concept">[persona o figura ideal que encarna ejemplarmente valores superiores y opera como modelo de vida]</span>.</li>
+                <li><strong>Contrafigura</strong> <span class="concept">[persona o figura que encarna desvalores y opera como modelo negativo]</span>.</li>
+            </ul>
+            <p>
+                El prototipo no exige imitación de acciones, sino <strong>adopción de la disposición de ánimo</strong>.
+                No se copia lo que el modelo hace, sino que su ejemplo transforma la actitud interior del discípulo.
+            </p>
+            <div class="quote">
+                <p><strong>"No hay nada en la tierra que tan originariamente haga volverse buena a una persona como la simple intuición de la bondad de una persona buena."</strong></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>4.5 Tipos de abogados según la jerarquía axiológica</h3>
+            <div class="grid-3">
+                <div class="tipo-card">
+                    <div class="emoji">◇</div>
+                    <h4>El santo</h4>
+                    <div class="valor">Valor religioso</div>
+                    <p class="ejemplo">Defiende a los indefensos sin buscar recompensa.</p>
+                </div>
+                <div class="tipo-card">
+                    <div class="emoji">◆</div>
+                    <h4>El genio</h4>
+                    <div class="valor">Valores espirituales</div>
+                    <p class="ejemplo">Crea doctrina, ilumina el pensamiento jurídico.</p>
+                </div>
+                <div class="tipo-card">
+                    <div class="emoji">▲</div>
+                    <h4>El héroe</h4>
+                    <div class="valor">Valores vitales</div>
+                    <p class="ejemplo">Enfrenta al poder, no se rinde.</p>
+                </div>
+                <div class="tipo-card">
+                    <div class="emoji">■</div>
+                    <h4>El guía</h4>
+                    <div class="valor">Valores útiles</div>
+                    <p class="ejemplo">Resuelve conflictos con eficacia.</p>
+                </div>
+                <div class="tipo-card">
+                    <div class="emoji">●</div>
+                    <h4>El artista del goce</h4>
+                    <div class="valor">Valores agradables</div>
+                    <p class="ejemplo">Solo busca su propio beneficio.</p>
+                </div>
+            </div>
+            <p>
+                Estos tipos no son compartimentos estancos: toda persona real los combina en proporciones diversas.
+                La tarea ética consiste en jerarquizarlos correctamente, subordinando los inferiores a los superiores.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 5: CASOS PRÁCTICOS (SLIDER) ===== -->
+    <section id="casos" class="section">
+        <div class="section-title">
+            <h2>5. Casos prácticos</h2>
+            <p>Aplicación del esquema axiológico a situaciones concretas</p>
+        </div>
+
+        <div class="slider-container">
+            <button class="slider-arrow prev" id="prevSlide" title="Anterior">←</button>
+            <div class="slider-track" id="sliderTrack">
+
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <h3>5.1 El Buen Samaritano</h3>
+                    <div class="situacion">
+                        <p>Un hombre es asaltado y dejado medio muerto. Un sacerdote y un levita pasan de largo.
+                        Un samaritano se compadece, lo cura, lo lleva a una posada y paga sus gastos.</p>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Personaje</th>
+                                    <th>Acción</th>
+                                    <th>Valor</th>
+                                    <th>Nivel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Ladrones</td><td>Dañan</td><td>Niegan todo valor</td><td>—</td></tr>
+                                <tr><td>Sacerdote y levita</td><td>Pasan de largo</td><td>Valor vital</td><td>Vital</td></tr>
+                                <tr><td>Samaritano</td><td>Ayuda</td><td>Valor religioso</td><td>Religioso</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        El samaritano no razona un deber: siente compasión. El amor es el órgano
+                        que descubre los valores. La norma no movió al sacerdote; el valor captado
+                        en la intuición emocional movió al samaritano.
+                    </p>
+                    <p>
+                        Como prototipo, el samaritano no exige imitación de su acción, sino adopción
+                        de su disposición de ánimo. Lo esencial no es repetir el gesto, sino asumir la actitud.
+                    </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <h3>5.2 El abogado y la contaminación</h3>
+                    <div class="situacion">
+                        <p>Eres abogado de una empresa acusada de contaminar un río. Se te ofrece un bono
+                        cuantioso por ocultar pruebas. Si pierdes, la comunidad afectada recibe justicia.</p>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Opción</th>
+                                    <th>Valor</th>
+                                    <th>Nivel</th>
+                                    <th>Valoración</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Aceptar el bono</td><td>Dinero</td><td>Sensible</td><td><strong>Malo</strong></td></tr>
+                                <tr><td>Ganar sin trampas</td><td>Éxito</td><td>Vital</td><td><strong>Neutro</strong></td></tr>
+                                <tr><td>Perder defendiendo la verdad</td><td>Verdad</td><td>Espiritual</td><td><strong>Bueno</strong></td></tr>
+                                <tr><td>Renunciar y denunciar</td><td>Justicia</td><td>Espiritual/Religioso</td><td><strong>Muy bueno</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        Scheler no dicta la decisión: ofrece las herramientas para que el sujeto
+                        identifique el valor superior y decida. La <strong>conciencia moral</strong>
+                        <span class="concept">[capacidad de captar valores y de juzgar la propia conducta según ellos]</span>
+                        es la instancia última de decisión.
+                    </p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <h3>5.3 La ley injusta</h3>
+                    <div class="situacion">
+                        <p>En un país, la ley prohíbe a las mujeres estudiar en la universidad.
+                        La norma es positiva y obligatoria. ¿Es justa?</p>
+                    </div>
+
+                    <ul class="styled-list">
+                        <li>La <strong>ley</strong> es deber normativo, nivel 3.</li>
+                        <li>El <strong>valor</strong> de la dignidad humana es nivel 1.</li>
+                        <li>La ley contradice el valor: es <strong>injusta</strong>.</li>
+                        <li>Quien la defiende posterga el valor superior en favor del inferior.</li>
+                    </ul>
+                    <p>
+                        La justicia como valor sigue existiendo aunque la ley la niegue.
+                        La <strong>desobediencia civil</strong>
+                        <span class="concept">[acto público y no violento de transgresión de una ley injusta, fundado en la primacía de valores superiores sobre el orden legal positivo]</span>
+                        encuentra aquí su fundamentación axiológica.
+                    </p>
+                </div>
+
+            </div>
+            <button class="slider-arrow next" id="nextSlide" title="Siguiente">→</button>
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 6: RECURSOS ===== -->
+    <section id="recursos" class="section section-alt">
+        <div class="section-title">
+            <h2>6. Recursos</h2>
+            <p>Glosario, citas y bibliografía</p>
+        </div>
+
+        <div class="card">
+            <h3>6.1 Glosario conceptual</h3>
+
+            <div class="glosario-item">
+                <div class="termino">A priori</div>
+                <div class="definicion">
+                    <span class="concept">[conocimiento que no viene de la experiencia, sino que se funda en la estructura misma de la razón o de la intuición esencial]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">A posteriori</div>
+                <div class="definicion">
+                    <span class="concept">[conocimiento que viene de la experiencia, de la observación o de la inducción]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Bien</div>
+                <div class="definicion">
+                    <span class="concept">[objeto concreto y real que posee valor]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Valor</div>
+                <div class="definicion">
+                    <span class="concept">[cualidad objetiva, a priori e independiente de las cosas, que se capta por intuición emocional]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Jerarquía</div>
+                <div class="definicion">
+                    <span class="concept">[orden objetivo de superioridad e inferioridad entre los valores, fundado en su esencia]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Gesinnung</div>
+                <div class="definicion">
+                    <span class="concept">[disposición de ánimo: actitud interior profunda y duradera que orienta la voluntad y constituye el depositario primario del valor moral]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Fühlen</div>
+                <div class="definicion">
+                    <span class="concept">[percibir sentimental: acto intencional de la vida emocional que capta directamente las cualidades de valor]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Prototipo</div>
+                <div class="definicion">
+                    <span class="concept">[persona o figura ideal que encarna ejemplarmente valores superiores y opera como modelo de vida]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Contrafigura</div>
+                <div class="definicion">
+                    <span class="concept">[persona o figura que encarna desvalores y opera como modelo negativo]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Solidaridad</div>
+                <div class="definicion">
+                    <span class="concept">[principio según el cual todas las personas finitas son corresponsables del valor moral de todas las demás]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Fenomenología</div>
+                <div class="definicion">
+                    <span class="concept">[método filosófico que describe las estructuras esenciales de la experiencia consciente]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Intencionalidad</div>
+                <div class="definicion">
+                    <span class="concept">[propiedad de los actos de conciencia por la cual están dirigidos a un objeto]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Ideal regulador</div>
+                <div class="definicion">
+                    <span class="concept">[principio normativo que orienta la producción y aplicación del derecho sin estar necesariamente positivizado]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Derecho natural</div>
+                <div class="definicion">
+                    <span class="concept">[conjunto de principios jurídicos fundados en la naturaleza racional y social del hombre, anteriores y superiores al derecho positivo]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Positivismo jurídico</div>
+                <div class="definicion">
+                    <span class="concept">[concepción según la cual el derecho se reduce al conjunto de normas positivas vigentes, con independencia de su valoración ética]</span>
+                </div>
+            </div>
+            <div class="glosario-item">
+                <div class="termino">Autonomía de la ética</div>
+                <div class="definicion">
+                    <span class="concept">[independencia de la fundamentación ética respecto de presupuestos teológicos o metafísicos]</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>6.2 Citas fundamentales</h3>
+            <div class="quote"><p><strong>"El corazón posee algo estrictamente análogo a la lógica, en su propio dominio."</strong></p></div>
+            <div class="quote"><p><strong>"Los valores morales no pueden ser abstraídos de la historia positiva."</strong></p></div>
+            <div class="quote"><p><strong>"No hay nada en la tierra que tan originariamente haga volverse buena a una persona como la simple intuición de la bondad de una persona buena."</strong></p></div>
+            <div class="quote"><p><strong>"El hombre es el ser que se trasciende a sí mismo, trasciende de su vida y de toda vida."</strong></p></div>
+            <div class="quote"><p><strong>"La persona es la unidad de ser concreta y esencial de actos de la esencia más diversa."</strong></p></div>
+        </div>
+
+        <div class="card">
+            <h3>6.3 Bibliografía</h3>
+            <ul class="styled-list">
+                <li>Scheler, M. (2001). <em>Ética: Nuevo ensayo de fundamentación de un personalismo ético</em>. Caparrós Editores.</li>
+                <li>Scheler, M. (1941). <em>El formalismo en la ética y la ética material de los valores</em>. Revista de Occidente.</li>
+                <li><em>Diccionario de Filosofía Herder</em>: Max Scheler y la axiología.</li>
+            </ul>
+        </div>
+
+        <div class="preguntas">
+            <h3>6.4 Cuestiones para el estudio</h3>
+            <ol>
+                <li>¿Qué valores están presentes en el ordenamiento jurídico? ¿Cuáles ausentes?</li>
+                <li>¿Puede una ley ser injusta? ¿Cómo se fundamenta esa calificación?</li>
+                <li>¿Qué tipo de abogado corresponde a cada nivel de la jerarquía axiológica?</li>
+                <li>¿Qué prototipo jurídico orienta tu propia práctica profesional?</li>
+                <li>¿Cómo se relaciona el principio de solidaridad con la responsabilidad profesional del abogado?</li>
+                <li>¿Qué consecuencias tiene para el derecho la distinción entre bienes y valores?</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>
+            <strong>Max Scheler: la ética material de los valores</strong> — Una guía para futuros abogados.<br>
+            Basado en <em>Ética: Nuevo ensayo de fundamentación de un personalismo ético</em>,
+            traducción de Hilario Rodríguez Sanz (Caparrós Editores, 2001).
+        </p>
+        <p style="margin-top:1rem; font-size:0.8rem;">
+            El derecho sin valores es una máquina sin alma. Tú puedes ser el alma de esa máquina.
+        </p>
+    </footer>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <a href="#" class="back-to-top" id="backToTop" title="Volver arriba">↑</a>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== MODO OSCURO =====
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeToggle.textContent = '◑';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            themeToggle.textContent = isDark ? '◑' : '◐';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // ===== BOTÓN VOLVER ARRIBA =====
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // ===== CERRAR MENÚ MÓVIL =====
+        document.querySelectorAll('.navbar ul a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.navbar ul').classList.remove('active');
+            });
+        });
+
+        // ===== SLIDER DE CASOS =====
+        const track = document.getElementById('sliderTrack');
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevSlide');
+        const nextBtn = document.getElementById('nextSlide');
+        let currentIndex = 0;
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.dataset.index);
+                updateSlider();
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlider();
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider();
+            }
+        });
+
+        // ===== ANIMACIÓN DE APARICIÓN =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .caso, .tipo-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(15px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
